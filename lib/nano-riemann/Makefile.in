@@ -1,3 +1,4 @@
+AR = @AR@
 CC = @CC@
 CFLAGS = @CFLAGS@
 LDFLAGS = @LDFLAGS@
