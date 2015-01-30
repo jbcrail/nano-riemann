@@ -1,0 +1,12 @@
+MAKE = @MAKE@
+
+all:
+	@cd lib/nano-riemann && $(MAKE) $@
+	@cd src && $(MAKE) $@
+
+clean:
+	@cd lib/nano-riemann && $(MAKE) $@
+	@cd src && $(MAKE) $@
+
+cleanall: clean
+	rm -rf Makefile lib/nano-riemann/Makefile src/Makefile

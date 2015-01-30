@@ -1,0 +1,14 @@
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+
+TARGET=libnano-riemann.a
+OBJS=pb_common.o pb_decode.o pb_encode.o riemann.pb.o
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(AR) -cq $@ $^
+
+clean:
+	rm -rf $(OBJS) $(TARGET)

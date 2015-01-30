@@ -1,0 +1,16 @@
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+
+TARGET=nr
+OBJS=nr.o
+CFLAGS+= -I ../lib/nano-riemann
+LIBS=../lib/nano-riemann/libnano-riemann.a
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $^ $(LIBS) $(LDFLAGS) -o $@
+
+clean:
+	rm -rf $(OBJS) $(TARGET)

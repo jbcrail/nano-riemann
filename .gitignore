@@ -1,0 +1,4 @@
+*.o
+Makefile
+libnano-riemann.a
+nr
